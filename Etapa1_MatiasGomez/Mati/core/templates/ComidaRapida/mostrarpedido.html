@@ -73,43 +73,39 @@
     
   </ul>
     <table class="table">
-        <thead>
+          <thead>
             <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">Contraseña</th>
-                <th scope="col">Fecha de Nacimiento</th>
+                <th scope="col">Rut</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Nombre Completo</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Direccion</th>
                 <th scope="col">Email</th>
-                <th scope="col">Género</th>
-                <th scope="col">Modificar</th>
-                <th scope="col">Eliminar</th>
+                <th scope="col">Pais</th>
+                <th scope="col">Editar</th>
             </tr>
         </thead>
         <tbody>
-          {%for u in personas%}
+           
+            {%for u in clbb%}
             <tr>
-
-
-                    <td> {{u.nombre}}</td>
-                    <td> {{u.apellido}}</td>
-                    <td> {{u.contrasena}}</td>
-                    <td> {{u.fn}}</td>
-                    <td> {{u.email}}</td>
-                    <td> {{u.genero}}</td>
-                    <td><a href="{% url 'Modificar' u.email%}" class="btn btn-primary">Modificar</a></td>
-                    <td><a href="{% url 'Eliminar'  u.email%}" class="btn btn-primary">Eliminar</a></td>
-
-
+                <td>{{u.rut}}</td>
+                <td>{{u.image}}</td>
+                <td>{{u.nombreComp}}</td>
+                <td>{{u.telefono}}</td>
+                <td>{{u.direccion}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.pais}}</td>
+                <td><a href="{% url 'modColaborador' u.rut%}" class="btn btn-primary">Modificar</a></td>
+                <td><a href="{% url 'delColaborador' u.rut%}" class="btn btn-danger">Eliminar</a></td>
             </tr>
-          {%endfor%}
-
-
+            {%endfor%}
         </tbody>
 
     </table>
     <a href="{% url 'Ingresar'%}" class="btn btn-primary">Quiere Ingresar Otro</a>
     <footer>
-        <div class="container" style="padding: 80px 0;" align="center">
+        <div class="container" style="padding: 80px 0;" aling="center">
             <a href="https://www.facebook.com/profile.php?id=100065573964629" target="_blank">
                 <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
             </a>
@@ -122,7 +118,7 @@
   
         </div>
         <div style="background: #74adce;">
-            <p style="color: #eafdff; padding: 15px 0;" align="center">
+            <p style="color: #eafdff; padding: 15px 0;" aling="center">
               &copy; Esteban Ormeño y Matias Gomez <a href="LosComilones2021@gmail.com"> @Copyrigth Derechos reservados. </a>
             </p>
         </div>
