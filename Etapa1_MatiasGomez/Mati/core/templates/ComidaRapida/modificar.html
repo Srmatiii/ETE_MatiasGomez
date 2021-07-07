@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Los Comilónes</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/Estilop.css'%}">
+      <link rel="shortcut icon" href="{% static 'img/logoP.JPG'%}" type="image/x-icon">
+          <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 2;
+      overflow: hidden;
+      background-color: rgb(0, 0, 0);
+      float: none;
+    }
+    li {
+      float: left;
+    }
+    li a {
+      display: block;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    li a:hover:not(.active) {
+      background-color: rgb(22, 147, 185);
+    }
+    .carousel-inner img {
+width: 100%;
+height: 100%;
+}
+
+footer{
+    background: rgb(0, 0, 0);
+}
+a:link{
+    color: #fff;
+    text-decoration: none;
+}
+a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+a:active{
+    color: #fff;
+    text-decoration: none;
+}
+    
+    </style>
+</head>
+<body>
+  <ul>
+    <img src="{% static 'img/logoP.jpg'%}" width="80" height="80" class="barrai">
+    <li><a href="{% url 'Inicio'%}">Inicio</a></li>
+    <li><a href="{% url 'Catalogo'%}">Catálogo</a></li>
+    <li><a href="{% url 'Acercade'%}">Acerca de Nosotros</a></li>
+    <li><a href="{% url 'Mostrar'%}">Mostrar Pedido</a></li>
+      
+    </ul>
+  <body background="{% static 'img/fonditolindo.png'%}">
+    <form name="contacto" method="POST" action="file:///C:/Users/Esteban/Desktop/Duoc%20Segundo%20Año/Experiencia1_Ormeno_Acuna_007D/SelecCompras.html">
+        {% csrf_token %}
+        <div class="for-group">
+         {{form.nombre.label}}
+         {{form.nombre}}
+        </div>
+        <div class="for-group">
+          {{form.apellido.label}}
+          {{form.apellido}}
+        </div>
+        <div class="for-group">
+          {{form.contrasena.label}}
+          {{form.contrasena}}
+        </div>
+        
+        <div class="for-group">
+          {{form.fn.label}}
+          {{form.fn}}
+       
+        </div>
+        
+          <div class="for-group">
+            {{form.email.label}}
+            {{form.email}} 
+
+          </div>
+        <div class="form-check">
+          {{form.genero.label}}
+          {{form.genero}}
+         
+          </div>
+        
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+        
+      </form>
+      <footer>
+        <div class="container" style="padding: 80px 0;" align="center">
+            <a href="https://www.facebook.com/profile.php?id=100065573964629" target="_blank">
+                <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+            </a>
+            <a href="https://twitter.com/LComilones" target="_blank">
+                    <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                        <a href="" target="_blank">
+                                <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                            </a>
+  
+        </div>
+        <div style="background: #74adce;">
+            <p style="color: #eafdff; padding: 15px 0;" align="center">
+              &copy; Esteban Ormeño y Matias Gomez <a href="LosComilones2021@gmail.com"> @Copyrigth Derechos reservados. </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
